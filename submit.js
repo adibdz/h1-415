@@ -9,12 +9,12 @@ function reqListener () {
   leak("response", this.responseText);
 }
 
-get = function(context, url)
+get = function(url)
 {
  
    var XHR = new XMLHttpRequest();
    XHR.addEventListener('error', function( event ) {
-      leak("get_"+context+"_error","Something went wrong");
+      leak("get_error","Something went wrong");
    });
    XHR.addEventListener('load', reqListener);
    XHR.open('GET', url);
