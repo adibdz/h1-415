@@ -9,8 +9,7 @@ createFrame = function(url)
   i.appendChild(document.createElement('hr'));
 }
 
-createFrame('http://localhost:3000/');
-createFrame('http://localhost/');
-createFrame('https://localhost/');
+var url = document.getElementById("i").getAttribute("u");
+createFrame(url);
 
 document.body.appendChild(i);
