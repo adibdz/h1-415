@@ -1,1 +1,1 @@
-eval(atob(document.myform.evaldata));
+eval(atob(document.myform.evaldata.value));
