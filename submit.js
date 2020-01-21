@@ -6,9 +6,14 @@ leak = function(name, data)
 }
 
 function reqListener () {
-   leak("pre-response","1");
-   leak("response", this.responseText);
-   leak("post-response","1");
+   try {
+      leak("response", this.responseText);
+   }
+   catch(e)
+   {
+      leak("exception", e.name + ":" + e.message);
+   }
+   
 }
 
 get = function(url)
