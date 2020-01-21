@@ -11,6 +11,7 @@ window.onerror = function(message, url, lineNumber) {
 };  
 
 var i = document.createElement('div');
+
 createFrame = function(url)
 {
   var f = document.createElement('iframe');
@@ -21,7 +22,10 @@ createFrame = function(url)
   i.appendChild(document.createElement('hr'));
 }
 
-var url = document.getElementById("i").getAttribute("u");
-createFrame(url);
-leak("info","Running");
-document.body.appendChild(i);
+function cb(url){
+   createFrame(url);
+   leak("info","Running on " + url);
+   document.body.appendChild(i);
+}
+
+
