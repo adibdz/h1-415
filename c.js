@@ -23,9 +23,8 @@ createFrame = function(url)
 }
 
 function cb(url){
-   createFrame(url);
    leak("info","Running on " + url);
+   createFrame(url);
    document.body.appendChild(i);
 }
-
-
+cb("https://www.nasa.gov");
