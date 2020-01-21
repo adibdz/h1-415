@@ -1,4 +1,4 @@
-var url = "https://h1-415.h1ctf.com/documents";
+var url = "/documents";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url);
 xhr.onload = function() {
